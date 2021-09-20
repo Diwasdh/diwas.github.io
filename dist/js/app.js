@@ -10,17 +10,3 @@ function typewriter(){
     }
 }
 
-var firstsec= document.getElementById("section1");
-var secondsec= document.getElementById("section2");
-var lastscroll=0;
-
-window.onscroll=function () {
-    var st=window.pageYOffset||document.documentElement.scrollTop;
-    if(st>lastscroll){
-        secondsec.scrollIntoView({behavior : "smooth"});
-    }
-    else{
-        firstsec.scrollIntoView({behavior:"smooth"});
-    }
-    lastscroll =st<=0?0:st;
-  }

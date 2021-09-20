@@ -9,45 +9,184 @@ body::-webkit-scrollbar {
 }
 
 #home {
-  background-color: #c4d2eb;
+  /*  background: linear-gradient(226deg, #c4d2eb, #869fcc, #7c7e81, #5c88d9, #a6afc0, #91a7cf);
+    background-size: 1200% 1200%;
+    animation: homeAnimation 30s ease infinite;
+    @keyframes  homeAnimation{
+        0%{background-position:0% 92%}
+        50%{background-position:100% 9%}
+        100%{background-position:0% 92%}
+    } */
+  background-color: black;
+  background-image: url("/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
 }
 
-#home .text {
-  position: absolute;
-  left: 50vw;
-  bottom: 50vh;
+#home .home-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 100px;
+  padding-right: 100px;
+}
+
+#home .home-wrapper .text {
+  padding-left: 160px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   padding-left: 3vw;
   color: #283343;
 }
 
-#home .text h1 {
+#home .home-wrapper .text h1 {
   font-size: 35pt;
 }
 
-#home .text span {
-  color: black;
+#home .home-wrapper .text span {
+  color: whitesmoke;
 }
 
-#home .text p {
+#home .home-wrapper .text p {
   padding-top: 20px;
   font-size: 18pt;
 }
 
 #home .img-container {
-  position: absolute;
-  left: 26vw;
-  bottom: 39vh;
+  padding-right: 160px;
   height: 360px;
   width: 350px;
 }
 
 #home .img-container img {
+  border: 4px solid black;
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 
+#home #next_page {
+  color: whitesmoke;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  font-size: 36px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: -webkit-transform ease-out 1s;
+  transition: -webkit-transform ease-out 1s;
+  transition: transform ease-out 1s;
+  transition: transform ease-out 1s, -webkit-transform ease-out 1s;
+}
+
+#home #next_page:hover {
+  cursor: pointer;
+  -webkit-transform: scale(2.4);
+          transform: scale(2.4);
+}
+
+#home #cycle-svg {
+  position: absolute;
+  bottom: -1%;
+}
+
+#home #cycle-svg #wheel1, #home #cycle-svg #wheel2 {
+  -webkit-animation: wheel 1s linear infinite;
+          animation: wheel 1s linear infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes wheel {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes wheel {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+#home_page {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: blanchedalmond;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: -webkit-transform ease-out 1s;
+  transition: -webkit-transform ease-out 1s;
+  transition: transform ease-out 1s;
+  transition: transform ease-out 1s, -webkit-transform ease-out 1s;
+}
+
+#home_page:hover {
+  cursor: pointer;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
 #skill {
-  background-color: #e7c79f;
+  background: linear-gradient(52deg, #e7c79f, #ac9981, #d7b180, #d1a061, #a07a49, #ccb394);
+  background-size: 1200% 1200%;
+  -webkit-animation: skillBackground 30s ease infinite;
+          animation: skillBackground 30s ease infinite;
+}
+
+@-webkit-keyframes skillBackground {
+  0% {
+    background-position: 0% 87%;
+  }
+  50% {
+    background-position: 100% 14%;
+  }
+  100% {
+    background-position: 0% 87%;
+  }
+}
+
+@keyframes skillBackground {
+  0% {
+    background-position: 0% 87%;
+  }
+  50% {
+    background-position: 100% 14%;
+  }
+  100% {
+    background-position: 0% 87%;
+  }
+}
+
+#skill .skill-wrapper .skill-heading {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  color: #633705;
+  text-align: center;
 }
 /*# sourceMappingURL=index.css.map */

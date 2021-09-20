@@ -12,42 +12,128 @@ body::-webkit-scrollbar{
 }
 
 
+
 #home{
-    background-color: $primarycolor;
+   /*  background: linear-gradient(226deg, #c4d2eb, #869fcc, #7c7e81, #5c88d9, #a6afc0, #91a7cf);
+    background-size: 1200% 1200%;
+    animation: homeAnimation 30s ease infinite;
+    @keyframes  homeAnimation{
+        0%{background-position:0% 92%}
+        50%{background-position:100% 9%}
+        100%{background-position:0% 92%}
+    } */
+     background-color: black;
+    background-image: url("/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden; 
+    .home-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 100px;
+        padding-right: 100px;
     .text{
-        position: absolute;
-        left: 50vw;
-        bottom: 50vh;
+        padding-left: 160px;
+        align-self: center;
         padding-left: 3vw;
         color: $secondarycolor;
         h1{
             font-size: 35pt;
         }
         span{
-            color: black;
+            color: whitesmoke;
         }
         p{
             padding-top: 20px;
             font-size: 18pt;
         }
     }
+    }
     .img-container{
-        position: absolute;
-        left: 26vw;
-        bottom: 39vh;
+        padding-right: 160px;
         height: 360px;
         width: 350px;
         img{
+            border: 4px solid black;
             width: 100%;
             height: 100%;
             border-radius: 50%;
         }
     }
+    #next_page{
+        color: whitesmoke;
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        font-size: 36px;
+        transform: scale(1.5);
+        transition: transform ease-out 1s;
+        &:hover{
+            cursor: pointer;
+            transform: scale(2.4);
+            
+        }
+    }
+    #cycle-svg{
+        position: absolute;
+        bottom: -1%;
+        #wheel1,#wheel2{
+            animation: wheel 1s linear infinite;
+            transform-origin: center;
+            transform-box: fill-box;
+        }
+        
+        @keyframes wheel {
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+            
+        }
+    }
+
     
+}
+#home_page{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+    transform: scale(1.5);
+    transition: transform ease-out 1s;
+    &:hover{
+        cursor: pointer;
+        transform: scale(2.0);
+    }
 }
 
 #skill{
-    background-color: rgb(231,199,159);
+    background: linear-gradient(52deg, #e7c79f, #ac9981, #d7b180, #d1a061, #a07a49, #ccb394);
+    background-size: 1200% 1200%;
+    animation: skillBackground 30s ease infinite;
+    @keyframes skillBackground {
+        0%{background-position:0% 87%}
+        50%{background-position:100% 14%}
+        100%{background-position:0% 87%}
+    }
+    $color: #633705;
+    .skill-wrapper{
+        
+        .skill-heading{
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            color: $color;
+            text-align: center;
+        }
+    }
+
 }
 
 
