@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
         50%{background-position:100% 9%}
         100%{background-position:0% 92%}
     } */
-  background: url(/assets/background.jpg) no-repeat;
+  background: url(https://diwasdh.github.io/diwas.github.io/assets/background.jpg) no-repeat;
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
